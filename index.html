@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Conectar ao servidor MIX</title>
+    <title>Conectando ao servidor MIX</title>
+    <script>
+      function redirect() {
+        window.location.href = "steam://connect/169.150.198.105:26565/mix";
+        setTimeout(() => {
+          window.close();
+        }, 1000);
+      }
+    </script>
   </head>
-  <body style="font-family: sans-serif; text-align: center; margin-top: 80px;">
-    <h1>🎮 Clique abaixo para entrar no servidor MIX</h1>
-    <a href="steam://connect/169.150.198.105:26565/mix" style="font-size: 24px; padding: 12px 24px; background: #0078D4; color: white; border-radius: 8px; text-decoration: none;">
-      Entrar no servidor
-    </a>
-    <p style="margin-top: 20px;">Se não funcionar, certifique-se de que o Steam está aberto.</p>
+  <body onload="redirect()" style="text-align:center; margin-top:80px; font-family:sans-serif;">
+    <h2>🎮 Conectando ao servidor MIX...</h2>
+    <p>Se o jogo não abrir automaticamente, <a href="steam://connect/169.150.198.105:26565/mix">clique aqui</a>.</p>
   </body>
 </html>
